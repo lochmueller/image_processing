@@ -1,0 +1,44 @@
+{
+	"name": "lochmueller/image-processing",
+	"type": "typo3-cms-extension",
+	"description": "Force image processing for TYPO3",
+	"autoload": {
+		"psr-4": {
+			"HDNET\\ImageProcessing\\": "Classes/"
+		}
+	},
+	"authors": [
+		{
+			"name": "Tim Lochmüller",
+			"email": "tim.lochmueller@hdnet.de",
+			"role": "Developer",
+			"homepage": "https://github.com/lochmueller"
+		}
+	],
+	"require": {
+		"php": "^7.4||^8.0",
+		"typo3/cms-core": "^10.4.6"
+	},
+	"replace": {
+		"typo3-ter/image-processing": "self.version"
+	},
+	"homepage": "https://github.com/lochmueller/image_processing",
+	"license": "GPL-2.0-or-later",
+	"support": {
+		"issues": "https://github.com/lochmueller/image_processing/issues"
+	},
+	"config": {
+		"vendor-dir": ".Build/vendor",
+		"bin-dir": ".Build/bin"
+	},
+	"extra": {
+		"typo3/cms": {
+			"extension-key": "image_processing",
+			"cms-package-dir": "{$vendor-dir}/typo3/cms",
+			"web-dir": ".Build/Web",
+			"Package": {
+				"partOfMinimalUsableSystem": true
+			}
+		}
+	}
+}
