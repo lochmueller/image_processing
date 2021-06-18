@@ -1,0 +1,12 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+    public: false
+
+  HDNET\ImageProcessing\EventListener\PostFileProcessingListener:
+    tags:
+      - name: event.listener
+        identifier: 'image-processing/postprocessing'
+        event: TYPO3\CMS\Core\Resource\Event\AfterFileProcessingEvent
+        before: 'webp.after-file-processing'
